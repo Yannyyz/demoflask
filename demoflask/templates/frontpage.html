@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block front %}
+{{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skull.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+{% endblock %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block main %}
+    <script type="x-shader/x-vertex" id="vertexshader">
+	  attribute float size;
+	  attribute vec3 color;
+	  attribute float fade;
+
+	  varying vec3 vColor;
+
+	  void main() {
+		vColor = color;
+		vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+		gl_PointSize = size;
+		gl_Position = projectionMatrix * mvPosition;
+	  }
+	</script>
+
+	<script type="x-shader/x-fragment" id="fragmentshader">
+	  uniform sampler2D pointTexture;
+	  varying vec3 vColor;
+	  void main() {
+		gl_FragColor = vec4(vColor, 1.0);
+		gl_FragColor = gl_FragColor * texture2D(pointTexture, gl_PointCoord);
+	  }
+	</script>
+    <script src="{{ url_for('static', filename='js/frontpage/three.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/MeshSurfaceSampler_20210711.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/OBJLoader_20210711.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/TrackballControls.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/EffectComposer.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/RenderPass.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/UnrealBloomPass.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/LuminosityHighPassShader.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/CopyShader.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/ShaderPass.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/gsap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/frontpage/skull.js') }}"></script>
+{% endblock %}
+
+
+{% block footer %}{% endblock %}

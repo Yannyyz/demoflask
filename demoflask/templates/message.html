@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block front %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/message.css')}}">
+{% endblock %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block main %}
+	<div class="main">
+		<div class="leftcor">
+			<h3>Thanks</h3>
+			<h3>For</h3>
+			<h3>Your</h3>
+			<h3>Comments</h3>
+		</div>
+		{% for each in data %}
+		<ul class="message-thread">
+			<li>{{ each.message }}</li>
+			<p class="username">{{ each.name }}</p>
+			<p class="email">{{ each.email }}</p>
+		</ul>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+
+{% block footer %}{% endblock %}

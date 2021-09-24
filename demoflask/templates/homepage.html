@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block front %}
+{{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+{% endblock %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <section class="banner" id="banner">
+            <div class="imgSidebar">
+                <img src="{{ url_for('static', filename='images/bg.jpg') }}" />
+            </div>
+            <div class="contentBx">
+                <div>
+                    <h4><span>Hello</span>, I’m</h4>
+                    <h2>Mr. Yann</h2>
+                    <h4>father of dd doudou sanmei</h4>
+                    <p>Game's the same, just got more fierce.<br>
+                    After experiencing everything, the new Bubbles, the new McNulty, the new Omar, and the new Daniels will appear again. You don't have to feel excessive pain for someone's departure or death. Everything is in reincarnation.</p>
+                    <a href="#about" class="btn">About Me</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="title white">
+                <h2>About Me</h2>
+            </div>
+            <div class="content">
+                <div class="textBx">
+                    <p>I'll make him an offer he can't refuse.
+                        Friendship is everything. Friendship is more than talent. It is more than the government. It is almost the equal of family.
+                        Never hate your enemies. If affects your judgment.
+                        A friend should always underestimate your virtues and an enemy overestimate your faults.
+                        The lawyer with the briefcase can steal more money than the man with the gun.
+                        A man who doesn't spend time with his family can never be a real man.
+                        <br><br>
+                        Keep your friends close and your enemies closer.
+                        Accidents don't happen to people who take accidents as a personal insult.
+                        Never let anyone know what you are thinking.
+                        Behind every successful fortune, there is crime.
+                        Forgive. Forget. Life is full of mosfortunes.
+                        People who see the essence in one second and those who spend half their life unable to see the essence of a thing naturally have different fate.
+                    </p>
+                    <a href="#about" class="btn1">Details</a>
+                </div>
+                <div class="imgBx">
+                    <img src="{{ url_for('static', filename='images/bg1.jpg') }}" />
+                </div>
+            </div>
+            <div class="turn">
+
+            </div>
+        </section>
+        <section class="services" id="skills">
+            <div class="title">
+              <h2>My Skills</h2>
+              <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+            </div>
+            <div class="content">
+              <div class="servicesBx">
+                <img src="{{ url_for('static', filename='images/icon1.png') }}">
+                <h2>Web Design</h2>
+                <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+              </div>
+              <div class="servicesBx">
+                <img src="{{ url_for('static', filename='images/icon2.png') }}">
+                <h2>Web Development</h2>
+                <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+              </div>
+              <div class="servicesBx">
+                <img src="{{ url_for('static', filename='images/icon3.png') }}">
+                <h2>Android Apps</h2>
+                <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+              </div>
+              <div class="servicesBx">
+                <img src="{{ url_for('static', filename='images/icon4.png') }}">
+                <h2>Photography</h2>
+                <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+              </div>
+              <div class="servicesBx">
+                <img src="{{ url_for('static', filename='images/icon5.png') }}">
+                <h2>Content Writing</h2>
+                <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+              </div>
+              <div class="servicesBx">
+                <img src="{{ url_for('static', filename='images/icon6.png') }}">
+                <h2>Video Editing</h2>
+                <p>The following is an introduction to some of the skills I have mastered, I have achievements for each skill.</p>
+              </div>
+            </div>
+        </section>
+        <section class="work" id="photos">
+            <div class="title">
+              <h2>Recent Photos</h2>
+              <p>I really like photography, these are my recent photography collections, I hope you like them.</p>
+            </div>
+            <div class="content">
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img1.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 01</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img2.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 02</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img3.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 03</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img4.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 04</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img5.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 05</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img6.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 06</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img7.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 07</h3>
+                </div>
+              </div>
+              <div class="workBx">
+                <div class="imgBx">
+                  <img src="{{ url_for('static', filename='images/img8.jpg') }}">
+                </div>
+                <div class="textBx">
+                  <h3>Project 08</h3>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="title white">
+              <h2>Contact Me</h2>
+              <p>If you are interested in the above, please don't be stingy with your compliments, you can see them in the comment area after leaving a message.</p>
+            </div>
+            <div class="contactForm">
+                <form action="{{ url_for('handle') }}" method="POST">
+                  <div class="row">
+                    <div class="col50">
+                      <input type="text" name="username" placeholder="Name" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col50">
+                      <input type="text" name="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col100">
+                      <textarea placeholder="Message" name="message" required></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Send">
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
